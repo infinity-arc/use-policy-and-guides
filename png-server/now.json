@@ -1,0 +1,9 @@
+{
+    "name": "ia-use-policy-assets",
+    "alias": "ia-use-policy-assets",
+    "version": 2,
+    "build": {
+        "src": "./*.png",
+        "@now/optipng"
+    }
+}

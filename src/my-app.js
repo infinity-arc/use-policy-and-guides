@@ -82,13 +82,27 @@ class MyApp extends PolymerElement {
       <app-drawer-layout fullbleed="" narrow="{{narrow}}">
         <!-- Drawer content -->
         <app-drawer id="drawer" slot="drawer" swipe-open="[[narrow]]">
-          <app-toolbar>Menu</app-toolbar>
+          <app-toolbar>
+            
+              <img style="position: relative; height: 100%" src="https://ia-own-webassets.c1i44.now.sh/img/IAshortblackLogo025x.png"/><span style="font-family:Audiowide">INFINITY ARC</span>
+
+          </app-toolbar>
+          </div>
+          <hr>
+          <h2 style="margin-left: 10px">Menu</h2>
           <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
-            <a name="view1" href="[[rootPath]]view1">View One</a>
-            <a name="view2" href="[[rootPath]]view2">View Two</a>
-            <a name="view3" href="[[rootPath]]view3">View Three</a>
+            <a name="view1" href="[[rootPath]]view1">First time email setup</a>
+            <a name="view2" href="[[rootPath]]view2">Terms of use</a>
+            <!-- <a name="view3" href="[[rootPath]]view3">View Three</a> -->
           </iron-selector>
+          <hr>
+          <div style="background: rgba(255,255,200,0.5); margin: 10px; padding: 10px; text-align: justify">
+          <strong>Please note:</strong>
+          This resource will eventually become more eloborate online how to guides and public access to policies regarding individual services.
+        
+        </div>
         </app-drawer>
+        
 
         <!-- Main content -->
         <app-header-layout has-scrolling-region="">
@@ -96,18 +110,24 @@ class MyApp extends PolymerElement {
           <app-header slot="header" condenses="" reveals="" effects="waterfall">
             <app-toolbar>
               <paper-icon-button icon="my-icons:menu" drawer-toggle=""></paper-icon-button>
-              <div main-title="">My App</div>
+              <div  main-title="Infinity Arc">
+              <h3>
+              
+              <span>Acceptable use policy and setup guides</span></h3>
+            
+            </div>
             </app-toolbar>
           </app-header>
 
           <iron-pages selected="[[page]]" attr-for-selected="name" role="main">
             <my-view1 name="view1"></my-view1>
             <my-view2 name="view2"></my-view2>
-            <my-view3 name="view3"></my-view3>
+            <!-- <my-view3 name="view3"></my-view3> -->
             <my-view404 name="view404"></my-view404>
           </iron-pages>
         </app-header-layout>
       </app-drawer-layout>
+      
     `;
   }
 

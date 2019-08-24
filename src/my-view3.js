@@ -17,14 +17,34 @@ class MyView3 extends PolymerElement {
       <style include="shared-styles">
         :host {
           display: block;
-
           padding: 10px;
+        }
+        .page-heading{
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+        }
+        .page-heading h1{
+          padding-left: 10px;
+        }
+        blockquote{
+          background: lightgray;
+          border-left: 3px solid darkblue;
+          padding: 1vw;
+          font-style: oblique;
+        }
+        p,a{
+          text-align: justify;
         }
       </style>
 
       <div class="card">
-        <div class="circle">3</div>
-        <h1>View Three</h1>
+        <div class="page-heading">
+          <div class="circle">3</div>
+          <div>
+            <h1>View Three</h1>
+          </div>
+        </div>
         <p>Modus commodo minimum eum te, vero utinam assueverit per eu.</p>
         <p>Ea duis bonorum nec, falli paulo aliquid ei eum.Has at minim mucius aliquam, est id tempor laoreet.Pro saepe pertinax ei, ad pri animal labores suscipiantur.</p>
       </div>
